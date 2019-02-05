@@ -18,6 +18,9 @@ func jwtAuthBackendResource() *schema.Resource {
 		Delete: jwtAuthBackendDelete,
 		Read:   jwtAuthBackendRead,
 		Update: jwtAuthBackendUpdate,
+		Importer: &schema.ResourceImporter{
+			State: schema.ImportStatePassthrough,
+		},
 
 		Schema: map[string]*schema.Schema{
 
